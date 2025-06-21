@@ -1,3 +1,5 @@
+import os
+
 def menu():
     print ("------- Menu --------")
     print ("-                   -")
@@ -20,5 +22,19 @@ def menu():
         except:
             print ("Not a valid choice")
 
-choice = menu()
-print (choice)
+def selectJournal():
+    print ("**********************")
+    print ("***                ***")
+    print ("*** Select Journal ***")
+    print ("***                ***")
+    print ("**********************")
+    print()
+
+    path = "/home/spencer/Documents/code/journal/journals/"
+    dir_list = os.listdir(path)
+    for dir in dir_list:
+        print("* " + dir[:-4])
+    print ()
+
+
+selectJournal()
